@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mediinsumos S.A.S. · Plan de corte a Microsoft 365</title>
+<style>
+  :root{
+    --tinta:#14181d; --gris:#5b6672; --linea:#e4e8ec;
+    --azul:#1a56a8; --azull:#eff5fd;
+    --verde:#17663f; --verdel:#edf6f1;
+    --rojo:#9c2a2a; --rojol:#fdf2f2;
+    --ambar:#8a6100; --ambarl:#fff8e8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:48px 24px 80px;
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    color:var(--tinta); background:#fff;
+  }
+  .wrap{max-width:860px; margin:0 auto;}
+  header{border-bottom:3px solid var(--azul); padding-bottom:22px; margin-bottom:38px;}
+  .kicker{font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--azul);
+          font-weight:700; margin:0 0 10px;}
+  h1{font-size:29px; line-height:1.2; margin:0 0 10px; font-weight:700;}
+  .sub{color:var(--gris); margin:0; font-size:17px;}
+  h2{font-size:21px; margin:44px 0 14px; padding-top:22px; border-top:1px solid var(--linea);
+     font-weight:700;}
+  h2:first-of-type{border-top:0; padding-top:0;}
+  h3{font-size:16px; margin:26px 0 8px; font-weight:700;}
+  p{margin:0 0 14px;}
+  ul{margin:0 0 16px; padding-left:22px;}
+  li{margin-bottom:9px;}
+  .caja{border-radius:10px; padding:20px 24px; margin:22px 0;}
+  .verde{background:var(--verdel); border-left:4px solid var(--verde);}
+  .rojo{background:var(--rojol); border-left:4px solid var(--rojo);}
+  .ambar{background:var(--ambarl); border-left:4px solid var(--ambar);}
+  .azul{background:var(--azull); border-left:4px solid var(--azul);}
+  .caja h3{margin-top:0;}
+  .caja p:last-child{margin-bottom:0;}
+  table{width:100%; border-collapse:collapse; margin:18px 0 22px; font-size:15px;}
+  th{text-align:left; font-size:12px; letter-spacing:.07em; text-transform:uppercase;
+     color:var(--gris); border-bottom:2px solid var(--linea); padding:0 10px 8px 0;}
+  td{padding:11px 10px 11px 0; border-bottom:1px solid var(--linea); vertical-align:top;}
+  td.num{font-variant-numeric:tabular-nums; white-space:nowrap;}
+  .ok{color:var(--verde); font-weight:600;}
+  .mal{color:var(--rojo); font-weight:600;}
+  .nota{font-size:14px; color:var(--gris);}
+  footer{margin-top:52px; padding-top:20px; border-top:1px solid var(--linea);
+         font-size:13px; color:var(--gris);}
+  code{background:#f2f4f6; padding:1px 5px; border-radius:4px; font-size:14px;}
+  .paso{display:flex; gap:18px; padding:16px 0; border-bottom:1px solid var(--linea);}
+  .paso:last-child{border-bottom:0;}
+  .hora{flex:0 0 112px; font-weight:700; color:var(--azul); font-size:14px; padding-top:1px;}
+  .paso-cuerpo{flex:1;}
+  .paso-cuerpo strong{display:block; margin-bottom:3px;}
+  .paso-cuerpo .nota{margin:0;}
+  .boton{display:inline-block; background:var(--azul); color:#fff; text-decoration:none;
+         padding:11px 22px; border-radius:7px; font-weight:700; font-size:15px; margin:4px 0 2px;}
+  .boton:hover{background:#15458a;}
+  @media print{body{padding:0;} .caja{break-inside:avoid;} h2{break-after:avoid;} .paso{break-inside:avoid;}
+    .boton{background:#fff; color:var(--azul); border:1px solid var(--azul);}}
+  @media (max-width:620px){ .paso{flex-direction:column; gap:4px;} .hora{flex:none;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="kicker">Mediinsumos S.A.S. · NIT 900.838.110-4 · Plan de ejecución</p>
+  <h1>Migración del correo corporativo a Microsoft&nbsp;365</h1>
+  <p class="sub">Qué se hace, en qué orden, qué van a ver ustedes y qué necesitamos de su parte · 10 de noviembre de 2026</p>
+</header>
+
+<div class="caja rojo">
+  <h3>El correo está rechazando mensajes en este momento</h3>
+  <p>El almacenamiento del plan de Hostinger está en <strong>30 GB de 30 GB</strong>. Cuando
+  el espacio contratado se agota, el servidor deja de aceptar correo entrante y quien les
+  escribe recibe un aviso de error. No es una demora: el mensaje no llega.</p>
+  <p>Este documento explica por qué pasó otra vez, por qué esta vez la solución no es la misma
+  de octubre, y exactamente qué vamos a hacer.</p>
+</div>
+
+<h2>1 · Por qué esto es hoy y no la otra semana</h2>
+
+<p>El 1 de octubre atendimos exactamente este mismo reporte. En esa ocasión se resolvió
+<strong>sin comprar espacio y sin borrar un solo mensaje</strong>: el buzón de gerencia tenía
+40 GB reservados y usaba 14, así que se le redujo la cuota y ese espacio se le pasó a logística,
+que estaba al 100 %.</p>
+
+<p>Esa solución funcionó porque sobraba cuota mal repartida. <strong>Hoy ya no sobra.</strong></p>
+
+<table>
+  <thead>
+    <tr><th>Buzón</th><th>1 de octubre</th><th>10 de noviembre</th><th>Creció</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>gerencia@</td><td class="num">14,37 GB</td><td class="num">15,57 GB</td><td class="num">+1,20 GB</td></tr>
+    <tr><td>logistica@</td><td class="num">10,00 GB</td><td class="num">11,16 GB</td><td class="num">+1,16 GB</td></tr>
+    <tr><td>contabilidad@</td><td class="num">6,40 GB</td><td class="num">7,34 GB</td><td class="num">+0,94 GB</td></tr>
+    <tr><td>direccioncomercial@</td><td class="num">5,59 GB</td><td class="num">6,15 GB</td><td class="num">+0,56 GB</td></tr>
+    <tr><td>direcciontecnica@</td><td class="num">1,51 GB</td><td class="num">1,62 GB</td><td class="num">+0,11 GB</td></tr>
+    <tr><td><strong>Total real de correo</strong></td><td class="num"><strong>37,87 GB</strong></td><td class="num"><strong>41,84 GB</strong></td><td class="num"><strong>+3,97 GB</strong></td></tr>
+    <tr><td>Espacio contratado</td><td class="num">30 GB</td><td class="num">30 GB</td><td class="num">—</td></tr>
+  </tbody>
+</table>
+
+<div class="caja ambar">
+  <h3>El correo real ya es más grande que el plan</h3>
+  <p>41,84 GB de correo contra 30 GB contratados. Ya no hay un buzón con cuota de sobra al que
+  quitarle espacio para dárselo a otro: <strong>la redistribución de cuotas se agotó como
+  herramienta</strong>. El correo crece cerca de 1 GB por semana, así que comprar más espacio en
+  el plan actual compra meses, no una solución.</p>
+</div>
+
+<h2>2 · Qué está fallando, y qué no</h2>
+
+<p>Antes de proponer una migración revisamos si había algo más barato que la resolviera. Esto es
+lo que encontramos, para que quede constancia de lo que sí se verificó.</p>
+
+<table>
+  <thead>
+    <tr><th>Revisión</th><th>Resultado</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Registros MX</td><td><span class="ok">Correctos</span> · apuntan al servidor de correo del hosting</td></tr>
+    <tr><td>SPF</td><td><span class="ok">Correcto</span> · autoriza al servidor actual</td></tr>
+    <tr><td>DKIM</td><td><span class="ok">Correcto</span> · firma activa y válida</td></tr>
+    <tr><td>DMARC</td><td><span class="ok">Presente</span> · en modo observación</td></tr>
+    <tr><td>Listas negras de spam</td><td><span class="ok">El dominio no está listado</span></td></tr>
+    <tr><td>Correo saliente</td><td><span class="ok">Cero fallas</span> · 274 envíos registrados, todos entregados</td></tr>
+    <tr><td>Almacenamiento</td><td><span class="mal">Agotado</span> · 30 GB de 30 GB</td></tr>
+    <tr><td>Direcciones genéricas</td><td><span class="mal">No existen</span> · ver abajo</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Lo que ustedes envían está saliendo bien.</strong> El problema es de entrada, no de
+salida. Conviene saberlo porque la sensación desde adentro suele ser la contraria.</p>
+
+<h3>Las direcciones genéricas rebotan todas</h3>
+
+<p>El dominio tiene cinco buzones: contabilidad, direccioncomercial, direcciontecnica, gerencia
+y logistica. Cualquier otra dirección del dominio <strong>no existe y el servidor la rechaza</strong>.
+En la última semana vimos rechazados mensajes dirigidos a <code>info@</code> (cinco veces) y a
+<code>contacto@</code>.</p>
+
+<p>Si alguna de esas direcciones está publicada en la página web, en una firma de correo o en un
+documento comercial, quien escriba ahí <strong>nunca llega</strong>. Y no se puede resolver
+creando buzones nuevos: el plan actual está en su tope de 5 de 5.</p>
+
+<h2>3 · Qué se compra y por qué resuelve el problema de fondo</h2>
+
+<p>Microsoft 365 Empresa Estándar, que es el plan que ustedes escogieron de la propuesta del
+24 de octubre.</p>
+
+<table>
+  <thead>
+    <tr><th>Concepto</th><th>Hoy en Hostinger</th><th>Con Microsoft 365</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Almacenamiento</td><td>30 GB para todos, compartidos</td><td><strong>50 GB por buzón</strong> · 250 GB en total</td></tr>
+    <tr><td>Margen sobre lo que usan hoy</td><td class="mal">Negativo</td><td class="ok">Seis veces lo que ocupan</td></tr>
+    <tr><td>Buzones</td><td>5 de 5, tope alcanzado</td><td>Los que se necesiten</td></tr>
+    <tr><td>Direcciones genéricas</td><td>No es posible sin comprar buzón</td><td><strong>Buzones compartidos sin costo</strong></td></tr>
+    <tr><td>Archivos y Office</td><td>No incluye</td><td>1 TB por persona · Office de escritorio</td></tr>
+  </tbody>
+</table>
+
+<div class="caja verde">
+  <h3>Las direcciones genéricas quedan resueltas sin pagar más</h3>
+  <p>Microsoft permite crear <strong>buzones compartidos sin licencia</strong>, con 50 GB cada
+  uno. <code>info@</code>, <code>contacto@</code> y <code>ventas@</code> se crean el primer día,
+  sin costo adicional, y el equipo que corresponda los atiende desde su propio Outlook.</p>
+</div>
+
+<h3>Costo del servicio</h3>
+
+<p>Solo se compran <strong>cinco licencias</strong>. Las direcciones genéricas
+(<code>info@</code>, <code>contacto@</code>, <code>ventas@</code>) no pagan licencia porque son
+buzones compartidos.</p>
+
+<table>
+  <thead>
+    <tr><th>Plan</th><th>Qué incluye</th><th>Usuario/mes</th><th>5 licencias/mes</th><th>Al año</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Empresa Básico</strong></td>
+      <td>Buzón de 50 GB, 1 TB de archivos, Teams, Office <strong>en navegador y celular</strong></td>
+      <td class="num">USD 7,00</td><td class="num">USD 35</td><td class="num">USD 420</td>
+    </tr>
+    <tr>
+      <td><strong>Empresa Estándar</strong></td>
+      <td>Lo anterior más <strong>Office instalado en el computador</strong> (Outlook, Word, Excel)</td>
+      <td class="num">USD 12,50</td><td class="num">USD 62,50</td><td class="num">USD 750</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="caja ambar">
+  <h3>Verificar el precio en el momento de comprar</h3>
+  <p>La página de Microsoft para Colombia está mostrando hoy el plan Estándar
+  <strong>combinado con Copilot, a USD 23,50</strong> por usuario al mes. Ese paquete incluye la
+  herramienta de inteligencia artificial, que para resolver el correo no hace falta. El plan
+  Estándar por sí solo cuesta menos; el único que aparece con precio limpio en esa página es el
+  Básico, a USD 7,00.</p>
+  <p>Al momento de la compra hay que confirmar que lo que se está contratando es el plan sin
+  Copilot, salvo que ustedes quieran esa herramienta. La diferencia entre un plan y otro, para
+  cinco usuarios, es de más de <strong>USD 600 al año</strong>.</p>
+</div>
+
+<div class="caja azul">
+  <h3>Cuál de los dos conviene</h3>
+  <p><strong>Los dos resuelven el problema de correo por igual:</strong> ambos traen el buzón de
+  50 GB, que es lo que falta hoy. La diferencia es el Office de escritorio.</p>
+  <p>Si las cinco personas hoy trabajan con Outlook instalado en el computador, lo prudente es
+  <strong>Estándar</strong>: no es momento de cambiarle a nadie la forma de leer el correo en
+  medio de una migración. Si ya tienen Office con otra licencia, o trabajan desde el navegador,
+  <strong>Básico alcanza</strong> y cuesta la mitad.</p>
+  <p class="nota">Precios de lista consultados en la página oficial de Microsoft para Colombia el
+  10 de noviembre de 2026, sin impuestos. El plan mensual sin compromiso anual cuesta cerca de un
+  20 % más. La propuesta del 24 de octubre citaba USD 14 para Estándar; Microsoft reorganizó sus
+  planes desde entonces, por eso la cifra cambia.</p>
+</div>
+
+<h3>Cómo se compra, paso a paso</h3>
+
+<p>La suscripción la adquiere Mediinsumos directamente, a su nombre y con su medio de pago.
+Nosotros la configuramos, pero <strong>la empresa debe ser la dueña de su propio correo</strong>:
+si mañana cambian de proveedor de servicios, la cuenta y todo el correo siguen siendo suyos.</p>
+
+<div class="paso">
+  <div class="hora">1</div>
+  <div class="paso-cuerpo">
+    <strong>Entrar a la página de planes de Microsoft</strong>
+    <p><a class="boton" href="https://www.microsoft.com/es-co/microsoft-365/business/microsoft-365-plans-and-pricing"
+    target="_blank" rel="noopener">Ver los planes y comprar &rarr;</a></p>
+    <p class="nota">Elegir «Comprar ahora» en el plan acordado, con pago anual.
+    <strong>Revisar que el plan elegido no diga «con Copilot»</strong>, que es el que aparece
+    primero y cuesta casi el doble.</p>
+  </div>
+</div>
+<div class="paso">
+  <div class="hora">2</div>
+  <div class="paso-cuerpo">
+    <strong>Registrarse con un correo que NO sea del dominio</strong>
+    <p class="nota">Microsoft envía un código de verificación al correo que se use para
+    registrarse. Si se usa una dirección <code>@mediinsumos.com.co</code>, <strong>ese código no
+    va a llegar</strong>, porque es justamente el buzón que está rechazando mensajes. Conviene
+    usar una dirección personal o de Gmail. Esto es temporal: después queda todo bajo el dominio
+    de la empresa.</p>
+  </div>
+</div>
+<div class="paso">
+  <div class="hora">3</div>
+  <div class="paso-cuerpo">
+    <strong>Indicar cinco licencias y pagar</strong>
+    <p class="nota">Con tarjeta. Microsoft confirma la compra en el momento. No pide clave de
+    producto: la suscripción queda activa en la cuenta con la que se registró.</p>
+  </div>
+</div>
+<div class="paso">
+  <div class="hora">4</div>
+  <div class="paso-cuerpo">
+    <strong>Darnos acceso de administrador</strong>
+    <p class="nota">Es el único paso que requiere nuestra intervención y toma dos minutos.
+    Con eso arrancamos. El acceso se puede retirar cuando quieran.</p>
+  </div>
+</div>
+
+<p class="nota">Ni nosotros ni ninguna otra persona externa realiza el pago. Si surge cualquier
+duda durante la compra, se puede pausar en ese punto y continuamos juntos.</p>
+
+<h2>4 · Lo que ustedes van a ver, y conviene saberlo antes</h2>
+
+<div class="caja ambar">
+  <h3>Mañana el buzón va a verse vacío, y no está perdido</h3>
+  <p>El correo nuevo empieza a llegar a Microsoft apenas hagamos el cambio. Pero los
+  <strong>41,84 GB de correo histórico</strong> se copian por detrás, y eso toma entre dos y
+  tres días. Durante ese tiempo el buzón de Outlook se va llenando solo, de a poco, empezando
+  por lo más reciente.</p>
+  <p>Mientras tanto <strong>el correo viejo sigue completo y accesible</strong> en el webmail de
+  Hostinger, que no se apaga. Nadie pierde nada: está en dos lugares a la vez hasta que
+  terminemos.</p>
+</div>
+
+<p>Si alguien abre Outlook mañana en la mañana sin saber esto, la conclusión natural es que se
+perdió todo el correo de la empresa. Por eso pedimos que este punto se le comunique al equipo
+<strong>antes</strong> del corte, no después.</p>
+
+<h2>5 · El orden exacto</h2>
+
+<div class="paso">
+  <div class="hora">Paso 0</div>
+  <div class="paso-cuerpo">
+    <strong>Bajar el tiempo de propagación del DNS</strong>
+    <p class="nota">Es lo primero y lo único que no se puede recuperar si se olvida. Permite que,
+    si algo sale mal, el correo vuelva al servidor anterior en minutos en vez de en horas. Antes
+    de tocar nada se guarda la configuración actual en un archivo.</p>
+  </div>
+</div>
+<div class="paso">
+  <div class="hora">Horas 0–2</div>
+  <div class="paso-cuerpo">
+    <strong>Montar Microsoft 365</strong>
+    <p class="nota">Crear la organización, verificar la propiedad del dominio, crear los cinco
+    usuarios con las mismas direcciones de siempre y los buzones compartidos de
+    <code>info@</code>, <code>contacto@</code> y <code>ventas@</code>. Nada de esto afecta el
+    correo que está funcionando.</p>
+  </div>
+</div>
+<div class="paso">
+  <div class="hora">Horas 2–3</div>
+  <div class="paso-cuerpo">
+    <strong>El corte: apuntar el correo a Microsoft</strong>
+    <p class="nota">Se cambian a la vez los registros de entrega y los tres registros de
+    autenticación. Desde este momento el correo nuevo deja de rebotar porque llega a un buzón
+    con espacio. Se prueba enviando y recibiendo contra Gmail, Outlook y un dominio corporativo
+    antes de dar el paso por bueno.</p>
+  </div>
+</div>
+<div class="paso">
+  <div class="hora">Horas 3–8</div>
+  <div class="paso-cuerpo">
+    <strong>Configurar los equipos de las cinco personas</strong>
+    <p class="nota">Outlook y celular de cada una. Aquí necesitamos que estén disponibles.
+    También se desconecta la descarga automática que hoy lleva copia de logística hacia una
+    cuenta de Gmail, para que no quede duplicando correo.</p>
+  </div>
+</div>
+<div class="paso">
+  <div class="hora">Desde la hora 3</div>
+  <div class="paso-cuerpo">
+    <strong>Copiar el histórico, en segundo plano</strong>
+    <p class="nota">Empezando por gerencia, que es el más grande. Corre solo y no interrumpe a
+    nadie. Termina entre el segundo y el tercer día.</p>
+  </div>
+</div>
+<div class="paso">
+  <div class="hora">Día 2–3</div>
+  <div class="paso-cuerpo">
+    <strong>Segunda pasada y verificación</strong>
+    <p class="nota">Recoge lo que haya caído en el servidor viejo durante el cambio. Se compara
+    el número de mensajes de cada buzón contra el conteo tomado antes de empezar. Este es el
+    paso que evita perder correo y el que más se omite.</p>
+  </div>
+</div>
+<div class="paso">
+  <div class="hora">Día 30</div>
+  <div class="paso-cuerpo">
+    <strong>Cierre</strong>
+    <p class="nota">Solo cuando cada persona confirme que no le falta nada se da de baja el plan
+    de correo anterior y se endurece la política antisuplantación. Se entregan los accesos de
+    administrador a Mediinsumos.</p>
+  </div>
+</div>
+
+<h2>6 · Los riesgos, y qué hacemos con cada uno</h2>
+
+<div class="caja rojo">
+  <h3>El riesgo principal no es el corte: es la autenticación</h3>
+  <p>Hoy el dominio autoriza a enviar correo únicamente al servidor actual. Si alguien enviara
+  desde Microsoft sin haber actualizado esa autorización, el mensaje <strong>llegaría a la
+  carpeta de spam del destinatario</strong> en vez de rebotar. Para una empresa que envía
+  cotizaciones a clínicas, eso es peor que un rebote: un rebote se ve, el spam no.</p>
+  <p>Por eso los registros de autenticación se cambian <strong>en el mismo momento</strong> que
+  los de entrega, y no se da el corte por terminado hasta haber enviado correos de prueba reales
+  y confirmado que llegan a la bandeja de entrada.</p>
+</div>
+
+<table>
+  <thead>
+    <tr><th>Riesgo</th><th>Cómo se maneja</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Durante la propagación, algunos remitentes todavía escriben al servidor viejo</td>
+      <td>Ese correo rebota, pero <strong>ya está rebotando hoy</strong>. Los servidores de
+      correo reintentan automáticamente durante 24 a 72 horas, así que esos mensajes terminan
+      entrando a Microsoft. El cambio no empeora la situación: la corta.</td>
+    </tr>
+    <tr>
+      <td>El equipo abre Outlook y lo ve vacío</td>
+      <td>Se avisa antes del corte y se deja el webmail anterior disponible para consultar el
+      histórico mientras se copia.</td>
+    </tr>
+    <tr>
+      <td>Correo duplicado en la cuenta de Gmail de logística</td>
+      <td>Se desconecta la descarga automática durante el corte.</td>
+    </tr>
+    <tr>
+      <td>Algo sale mal y hay que devolverse</td>
+      <td>Se revierte la configuración guardada en el paso 0 y el correo vuelve al servidor
+      anterior en minutos. <strong>El servidor viejo no se apaga</strong>, así que no hay nada
+      que reactivar.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="caja azul">
+  <h3>Por qué esta vez se corta primero y se copia después</h3>
+  <p>Lo habitual es copiar todo el correo y recién entonces cambiar la entrega, para no
+  interrumpir un servicio que funciona. <strong>Aquí el servidor actual ya está rechazando
+  mensajes</strong>, así que no hay un servicio sano que proteger. Cambiar la entrega primero es
+  lo que detiene la pérdida; el histórico no corre peligro porque sigue intacto donde está.</p>
+</div>
+
+<h2>7 · Lo que no se hace, pase lo que pase</h2>
+
+<ul>
+  <li><strong>No se borra un solo mensaje</strong> del servidor anterior. Ni para hacer espacio,
+      ni para acelerar la copia.</li>
+  <li><strong>No se apaga el plan anterior</strong> el día del corte. Se mantiene al menos 30
+      días y hasta que cada persona confirme que tiene su correo completo.</li>
+  <li><strong>No se copia el contenido de ninguna cuenta de Gmail</strong> sin instrucción
+      escrita de gerencia, y no es parte del trabajo de hoy. Ver la sección 9.</li>
+  <li><strong>No se cambia ninguna dirección de correo.</strong> Los clientes y proveedores no se
+      enteran de nada: siguen escribiendo a donde siempre.</li>
+</ul>
+
+<h2>8 · Lo que necesitamos de Mediinsumos</h2>
+
+<p>El equipo ya salió. <strong>Eso no detiene nada:</strong> el trabajo de esta noche no necesita
+que nadie esté presente, y lo de mañana lo puede hacer cada persona sola en tres minutos.</p>
+
+<table>
+  <thead>
+    <tr><th>Qué</th><th>Quién</th><th>Cuándo</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Compra de las cinco licencias</strong><br>
+          <span class="nota">Es lo único que bloquea el arranque</span></td>
+      <td>Gerencia</td>
+      <td>Esta noche</td>
+    </tr>
+    <tr>
+      <td>Confirmar el plan: Básico o Estándar<br>
+          <span class="nota">Depende de si usan Outlook instalado o navegador</span></td>
+      <td>Gerencia</td>
+      <td>Antes de pagar</td>
+    </tr>
+    <tr>
+      <td>Avisar al equipo que mañana el buzón se verá vacío<br>
+          <span class="nota">Un mensaje de WhatsApp basta. Es el punto que más confusión evita.</span></td>
+      <td>Gerencia</td>
+      <td>Esta noche</td>
+    </tr>
+    <tr>
+      <td>Confirmar quién tiene acceso a la configuración del dominio</td>
+      <td>Gerencia</td>
+      <td>Esta noche</td>
+    </tr>
+    <tr>
+      <td>Las cuatro cuentas de Gmail<br>
+          <span class="nota">No se tocan hoy. Ver la sección 9 cuando quieran incluirlas.</span></td>
+      <td>—</td>
+      <td>Más adelante</td>
+    </tr>
+    <tr>
+      <td>Seguir el instructivo de tres pasos<br>
+          <span class="nota">Se entrega aparte, con las contraseñas nuevas</span></td>
+      <td>Cada una de las cinco personas</td>
+      <td>Mañana al llegar</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="caja azul">
+  <h3>No hace falta que nadie nos abra su computador</h3>
+  <p>Microsoft configura Outlook solo: la persona escribe su dirección y su contraseña nueva, y
+  el programa hace el resto. Por eso el corte se puede hacer esta noche con la oficina cerrada y
+  mañana cada quien entra por su cuenta siguiendo una hoja de tres pasos.</p>
+  <p>Estaremos disponibles por WhatsApp desde primera hora para quien se atasque.</p>
+</div>
+
+<div class="caja verde">
+  <h3>El compromiso</h3>
+  <p>Una vez se arranca, acompañamos hasta que esté terminado: el corte, la copia del histórico,
+  la verificación mensaje por mensaje y la configuración de cada equipo. No se deja a medias ni
+  se entrega hasta que las cinco personas confirmen que tienen su correo completo.</p>
+</div>
+
+<h2>9 · Las cuatro cuentas de Gmail · fase siguiente</h2>
+
+<p><strong>Esto no es para hoy.</strong> Esas cuatro direcciones están funcionando bien en Gmail
+y no son parte de la falla. Se incluyen aquí para que quede claro cómo entran cuando ustedes
+decidan, y qué costaría.</p>
+
+<div class="caja verde">
+  <h3>Entran sin pagar licencias adicionales</h3>
+  <p>Son direcciones de función, no de persona: cotizaciones, administración, soporte y
+  Cartagena. En Microsoft eso se resuelve con <strong>buzones compartidos, que no pagan
+  licencia</strong> y traen 50 GB cada uno.</p>
+  <p>Crear una dirección en el dominio <strong>no cuesta</strong>. Lo que cuesta es la licencia,
+  y la licencia solo hace falta cuando una persona necesita entrar con su propio usuario y
+  contraseña.</p>
+</div>
+
+<table>
+  <thead>
+    <tr><th></th><th>Usuario con licencia</th><th>Buzón compartido</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Qué es</td><td>Una persona, con su usuario y contraseña</td><td>Una dirección de la empresa</td></tr>
+    <tr><td>Recibe y envía con esa dirección</td><td class="ok">Sí</td><td class="ok">Sí</td></tr>
+    <tr><td>Almacenamiento</td><td>50 GB</td><td>50 GB</td></tr>
+    <tr><td>Entra con usuario propio</td><td class="ok">Sí</td><td>No: se abre desde el Outlook de quien tenga permiso</td></tr>
+    <tr><td>Costo</td><td class="num">USD 7 a 12,50 al mes</td><td class="ok">Sin costo</td></tr>
+  </tbody>
+</table>
+
+<div class="caja azul">
+  <h3>Para un cargo que rota, el buzón compartido no es la opción barata: es la correcta</h3>
+  <p>Mediinsumos nombra sus cuentas por cargo y no por persona, precisamente porque el personal
+  rota. Un buzón compartido está hecho para eso: <strong>la dirección pertenece al cargo, no a
+  quien lo ocupa</strong>.</p>
+  <p>Cuando alguien entra o sale, no hay que entregar contraseñas ni traspasar un buzón: se le
+  da o se le quita el permiso, y el histórico de la correspondencia se queda donde siempre
+  estuvo, en la empresa. Con una cuenta de Gmail a nombre de quien la creó, ese mismo cambio de
+  personal es un riesgo cada vez.</p>
+</div>
+
+<h3>Los pasos, cuando se decida</h3>
+
+<div class="paso">
+  <div class="hora">1</div>
+  <div class="paso-cuerpo">
+    <strong>Definir cuáles necesitan licencia y cuáles no</strong>
+    <p class="nota">La pregunta es una sola, por cada dirección: ¿quien atiende ese cargo ya
+    tiene un buzón propio entre los cinco? Si lo tiene, el buzón compartido le aparece dentro de
+    su Outlook y no cuesta nada. Si es una persona distinta que necesita entrar con su propio
+    usuario, esa sí lleva licencia.</p>
+  </div>
+</div>
+<div class="paso">
+  <div class="hora">2</div>
+  <div class="paso-cuerpo">
+    <strong>Crear las direcciones en el dominio</strong>
+    <p class="nota">Minutos. Quedan recibiendo de inmediato.</p>
+  </div>
+</div>
+<div class="paso">
+  <div class="hora">3</div>
+  <div class="paso-cuerpo">
+    <strong>Activar el reenvío desde Gmail</strong>
+    <p class="nota">Para que nada se pierda mientras los clientes aprenden la dirección nueva.
+    Se configura dentro de cada cuenta de Gmail: necesitamos las contraseñas, o que alguien de la
+    empresa lo active siguiendo nuestro instructivo. <strong>Se deja puesto mínimo seis
+    meses</strong>: hay clientes que escriben una vez al año.</p>
+  </div>
+</div>
+<div class="paso">
+  <div class="hora">4</div>
+  <div class="paso-cuerpo">
+    <strong>Copiar el histórico</strong>
+    <p class="nota">Por el mismo mecanismo que los cinco buzones del dominio. Pedimos una
+    instrucción escrita de gerencia autorizándolo; un mensaje basta, y es solo para que quede
+    constancia de quién ordenó qué.</p>
+  </div>
+</div>
+<div class="paso">
+  <div class="hora">5</div>
+  <div class="paso-cuerpo">
+    <strong>Cambiar la dirección en firmas y documentos</strong>
+    <p class="nota">Las cotizaciones que salen hoy llevan impresa la dirección de Gmail en el
+    pie de página. Hay que actualizarla ahí y avisarle a los contactos frecuentes.</p>
+  </div>
+</div>
+
+<div class="caja ambar">
+  <h3>Por qué vale la pena hacerlo, aunque no sea urgente</h3>
+  <p><strong>Una cuenta de Gmail no es de la empresa aunque la empresa la use.</strong> Está
+  registrada a nombre de quien la creó. Si esa persona se retira sin entregarla, si se pierde la
+  contraseña o si Google suspende la cuenta, se pierde de golpe el canal, el histórico y los
+  contactos. No hay a quién reclamarle. En una empresa donde el personal rota, eso ocurre tarde o
+  temprano.</p>
+  <p>Y hay un punto comercial: hoy las cotizaciones salen de una dirección de Gmail que dice ser
+  Mediinsumos. <strong>Eso es exactamente lo que hace un correo fraudulento</strong>, y el área
+  de sistemas de una clínica puede bloquearlo por esa sola razón, sin avisar. Una dirección del
+  dominio propio va firmada y verificada; una de Gmail no puede estarlo.</p>
+</div>
+
+
+<footer>
+  Mediinsumos S.A.S. · NIT 900.838.110-4 · Plan de ejecución del 10 de noviembre de 2026.<br>
+  Complementa el informe técnico del 1 de octubre y la propuesta de migración del 24 de octubre.
+  Las cifras de almacenamiento fueron tomadas del panel del servicio de correo el 10 de
+  noviembre de 2026.
+</footer>
+
+</div>
+</body>
+</html>
